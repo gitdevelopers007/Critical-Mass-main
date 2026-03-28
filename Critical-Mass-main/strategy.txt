@@ -1,0 +1,41 @@
+Critical Mass Bot Strategy
+
+Team Name: BOTZILLA
+
+Overview:
+Our bot is designed to play Chain Reaction using a dynamic heuristic-based decision-making algorithm.
+It does not rely on hardcoded move sequences. Instead, it evaluates the board and simulates future
+board states before selecting the best move.
+
+Approach:
+1. Valid Move Generation:
+   The bot first identifies all legal moves available to the current player.
+
+2. Move Simulation:
+   For each valid move, the bot simulates the complete board state after the move,
+   including all chain reactions caused by explosions.
+
+3. Heuristic Evaluation:
+   Each resulting board is scored based on:
+   - Orb count advantage
+   - Cell control advantage
+   - Corner cell control
+   - Near-critical explosion opportunities
+   - Risk from dangerous opponent cells
+
+4. Opponent Response Prediction:
+   The bot estimates the opponent’s strongest immediate response and factors that
+   into the final decision.
+
+5. Final Move Selection:
+   The move with the highest final heuristic score is selected.
+
+Design Goals:
+- Stay within the 1-second move limit
+- Handle chain reactions efficiently
+- Play both offensively and defensively
+- Remain dynamic and adaptable across different board states
+
+Conclusion:
+This bot balances expansion, stability, and tactical chain reactions to make efficient
+and competitive decisions in the game.
